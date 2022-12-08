@@ -1,4 +1,4 @@
-package com.stockmarketapp.ui.theme
+package com.stockmarketapp.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
