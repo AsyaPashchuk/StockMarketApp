@@ -4,7 +4,7 @@ import com.stockmarketapp.domain.model.CompanyListing
 import com.stockmarketapp.util.Resource
 import kotlinx.coroutines.flow.Flow
 
-interface StockMarketRepository {
+interface StockRepository {
 
     suspend fun getCompanyListing(
         fetchFromRemote: Boolean,

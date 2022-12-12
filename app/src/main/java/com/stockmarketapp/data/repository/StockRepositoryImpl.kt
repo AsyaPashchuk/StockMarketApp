@@ -6,7 +6,7 @@ import com.stockmarketapp.data.mapper.toCompanyListing
 import com.stockmarketapp.data.mapper.toCompanyListingEntity
 import com.stockmarketapp.data.remote.StockApi
 import com.stockmarketapp.domain.model.CompanyListing
-import com.stockmarketapp.domain.repository.StockMarketRepository
+import com.stockmarketapp.domain.repository.StockRepository
 import com.stockmarketapp.util.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -16,11 +16,11 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class StockMarketRepositoryImpl @Inject constructor(
-    val api: StockApi,
-    val db: StockDatabase,
-    val companyListingsParser: CSVParser<CompanyListing>
-): StockMarketRepository {
+class StockRepositoryImpl @Inject constructor(
+    private val api: StockApi,
+    private val db: StockDatabase,
+    private val companyListingsParser: CSVParser<CompanyListing>
+): StockRepository {
 
     private val dao = db.dao
 
